@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avengers - Next Level</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&family=Oxanium:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="shortcut icon" href="./src/imagens/avIco.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img class="logo" src="./src/imagens/logo.png" alt="Avengers">
+    </header>
+
+    <main class="selecao-de-personagens">
+
+        <section class="personagens">
+
+            <h1 class="titulo"> Selecione um personagem </h1>
+
+            <ul id="lista-de-personagens" class="lista-de-personagens" style="display: flex;">
+
+                <li class="personagem selecionado" id="iron-man" data-name="Homem de Ferro"
+                    data-description="O verdadeiro poder de Tony Stark é sua mente, ele é muito inteligente, um gênio, e portanto cria a sua própria armadura com atualizações periódicas, o que o torna um super-herói.">
+                    <img src="./src/imagens/card-iron-man.jpg" alt="Personagem → Homem de Ferro">
+                </li>
+
+                <li class="personagem" id="capitao-america" data-name="Capitão América"
+                    data-description="O jovem Steve Rogers tem problemas de saúde e é muito fraco e pequeno, mas durante a Segunda Guerra Mundial, aceita a experiência de receber Raios Gama, o que o transforma em um Super Soldado e o primeiro super-herói.">
+                    <img src="./src/imagens/card-capitao-america.jpg" alt="Personagem → Capitão América">
+                </li>
+
+                <li class="personagem" id="hulk" data-name="Hulk"
+                    data-description="O cientista Bruce Banner é muito inteligente, mas não sabe o que falta na vida, tentando reproduzir Steve Rogers com os Raios Gama, tenta se transformar em um super soldado, mas se transforma em uma besta verde incontrolável.">
+                    <img src="./src/imagens/card-hulk.jpg" alt="Personagem → Hulk">
+                </li>
+
+                <li class="personagem" id="thor" data-name="Thor"
+                    data-description="Vindo de Asgard, a terra dos deuses nórdicos, Thor, filho de Odin, tem como tarefa, proteger Midgard, como os asgardianos conhecem o planeta terra, se juntando para isso, aos Vingadores.">
+                    <img src="./src/imagens/card-thor.jpg" alt="Personagem → Thor">
+                </li>
+
+                <li class="personagem" id="viuva-negra" data-name="Viúva Negra"
+                    data-description="Natasha Romanoff é uma espiã russa que tem tanta agilidade e destreza com armas e lutas corporais, que foi recrutada para os Avengers.">
+                    <img src="./src/imagens/card-viuva-negra.jpg" alt="Personagem → Viúva Negra">
+                </li>
+
+                <li class="personagem" id="gaviao" data-name="Gavião Arqueiro"
+                    data-description="Clint Barton é muito perfeito com o Arco e Flecha, e tem uma visão privilegiada, além de conhecimentos em luta corporal, o levando a trabalhar na Shiled e depois com os Vingadores.">
+                    <img src="./src/imagens/card-gaviao.jpg" alt="Personagem → Gavião Arqueiro">
+                </li>
+
+                <li class="personagem" id="feiticeira" data-name="Feiticeira Escarlate"
+                    data-description="O poder principal de Wanda é a habilidade de manipular a magia conhecida como magia do Caos, uma magia negra, o que permite alterar a realidade e controlar formas de energia mística.">
+                    <img src="./src/imagens/card-feiticeira.jpg" alt="Personagem → Feiticeira Escarlate">
+                </li>
+
+                <li class="personagem" id="war-machine" data-name="Máquina de Guerra"
+                    data-description="O coronel do exército, James Rhodes é amigo de Tony Stark e assume uma das atualizações de suas armadura, tornando-se o Máquina de Guerra.">
+                    <img src="./src/imagens/card-war-machine.jpg" alt="Personagem → Máquina de Guerra">
+                </li>
+
+                <button onclick="trocarLista()">→</button>
+
+            </ul>
+
+            <ul id="lista-de-personagens2" class="lista-de-personagens2" style="display: none;">
+
+                <li class="personagem" id="ant-man" data-name="Homem Formiga"
+                    data-description="Hank Pym e depois Scott Lang, diminui de tamanho, mantendo seu peso e forças, se comunica com formigas por ondas mentais emitidas de seu capacete e faz com que obedeçam suas ordens.">
+                    <img src="./src/imagens/card-ant-man.jpg" alt="Personagem → Homem Formmiga">
+                </li>
+
+                <li class="personagem" id="spider-man" data-name="Homem Aranha"
+                    data-description="Peter Parker é um estudante adolescente que é mordido por uma aranha com DNA modificando sua força, agilidade, dando o poder de subir em paredes e se torna o icônico Homem-Aranha.">
+                    <img src="./src/imagens/card-spider-man.jpg" alt="Personagem → Homem Aranha">
+                </li>
+
+                <li class="personagem" id="mercurio" data-name="Mercúrio"
+                    data-description="Pietro Maximoff, irmão de Wanda, suporta aproximadamente 500 quilos, enquanto sua pernas podem suportar cerca de 1 tonelada em condições ideais, alcançando a velociade da luz.">
+                    <img src="./src/imagens/card-mercurio.jpg" alt="Personagem → Mercúrio">
+                </li>
+
+                <li class="personagem" id="visao" data-name="Visão"
+                    data-description="O Visão é um Sintozóide que tem Intangibilidade, pode voar e tem o poder de soltar Rajadas de Energia Solar.">
+                    <img src="./src/imagens/card-visao.jpg" alt="Personagem → Visão">
+                </li>
+
+                <li class="personagem" id="pantera-negra" data-name="Pantera Negra"
+                    data-description="O Rei T'challa tem todas as habilidades de um gato gigante da selva, se move com furtividade e poder, sube em árvores, e usa uma roupa preta feita de adamantium que esconde sua identidade.">
+                    <img src="./src/imagens/card-pantera-negra.jpg" alt="Personagem → Pantera Negra">
+                </li>
+
+                <li class="personagem" id="doctor-strange" data-name="Doutor Estranho"
+                    data-description="O Doutor Steven Strange pode fazer projeção astral, ver o futuro e tem consciência universal, teletransporte, viagem interdimensional, conjura feitiços, escudos, objetos, transmutação e rajada de energia.">
+                    <img src="./src/imagens/card-doctor-strange.jpg" alt="Personagem → Doutor Estranho">
+                </li>
+                <li class="personagem" id="capita-marvel" data-name="Capitã Marvel"
+                    data-description="Carol Denvers possui absorção e manipulação de energia; voo e supervelocidade; força, resistência e durabilidade sobre-humanas.">
+                    <img src="./src/imagens/card-capita-marvel.jpg" alt="Personagem → Capitã Marvel">
+                </li>
+
+                <li class="personagem" id="vespa" data-name="Vespa"
+                    data-description="Assim como Scott e Hank, Jannet e depois Hope Vandine podem reduzir de tamanho, voar, em a força,resistência e velocidade melhoradas, e pode controlar insetos.">
+                    <img src="./src/imagens/card-vespa.jpg" alt="Personagem → Vespa">
+                </li>
+
+                <button onclick="retornarLista()">←</button>
+
+            </ul>
+
+        </section>
+
+        <section class="personagem-selecionado">
+
+            <img class="personagem-grande" src="./src/imagens/card-iron-man.png" alt="Personagem Selecionado">
+
+            <div class="informacoes-personagem">
+                <h2 class="nome-personagem" id="nome-personagem">Ciclope</h2>
+                <p class="descricao-personagem" id="descricao-personagem">O verdadeiro poder de Tony Stark é sua mente, ele é muito inteligente, um gênio, e portanto cria a sua própria armadura com atualizações periódicas, o que o torna um super-herói.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="./src/js/index.js"></script>
+
+</body>
+
+</html>
